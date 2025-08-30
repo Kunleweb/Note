@@ -12,3 +12,6 @@ Once logged in what should be the default page widgets or features:
 - New Note : POST request
 
 Thats all for now!!
+
+
+4) Four our db: we will use a json file for now.
