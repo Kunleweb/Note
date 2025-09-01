@@ -13,10 +13,7 @@ exports.getAlluser =  (req, res) => {
     connection.query('Select * FROM users', (err, result)=>{
          res.status(200).json({status:'success', data: result})
 
-    })
-   
-    
-    
+    })    
 }
 
 
@@ -32,8 +29,8 @@ exports.getUser = (req, res)=>{
 
 
 exports.createUser = (req, res) =>{
-    const { id,name, role } = req.body;
-    connection.query(`insert into users values(?,?,?)`,[ id, name, role],
+    const { id,name, role, email, passkey } = req.body;
+    connection.query(`insert into users values(?,?,?,?,?)`,[ id, name, role, email, passkey],
        (err, result)=>{
         res.status(200).json({status:'success', data:result})
        }
@@ -64,3 +61,16 @@ exports.deleteUser = (req, res)=>{
         }
     )
 }
+
+
+exports.login = (req, res) =>{
+    const {email, passkey } = req.body;
+    if(!email || !passkey){
+        res.status(400).json({status:'input email and passkey'})
+    }
+    connection.query('Select *  from users where email = ?, passkey = ?',
+         [email, passkey], (err, result)=>{
+        res.status(200).json({status:'login successful', data: result})
+    })
+}
+

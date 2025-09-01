@@ -17,19 +17,40 @@ connection.connect()
 
 
 
-user.forEach(element => {
-  connection.query(
-    'INSERT INTO users (id, name, role) VALUES (?, ?, ?)',
-    [element.id, element.name, element.role],
-    (err, result) => {
-      if (err) throw err;
-      console.log('Inserted:', result.insertId);
-    }
-  );
-})
+// const e = user.forEach(element => {
+//   connection.query(
+//     'INSERT INTO users (id, name, role) VALUES (?, ?, ?)',
+//     [element.id, element.name, element.role],
+//     (err, result) => {
+//       if (err) throw err;
+//       console.log('Inserted:', result.insertId);
+//     }
+//   );
+// })
+
+const importdata = (req, res) =>{
+  user.forEach(element=>{connection.query('INSERT INTO users (id, name, role, email, passkey) VALUES (?, ?, ?,?,?)',
+    [element.id, element.name, element.role, element.email, element.passkey],(err, result)=>{
+        console.log(err)
+      
+    } )})
+
+}
 
 
 
+const deletedata =(req, res)=>{
+connection.query('Drop Table users', (err, result)=>{ 
+  console.log(err)})}
+  
+ 
 
+
+
+if (process.argv[2] === '--import'){
+  importdata()}
+  else if(process.argv[2]=== '--delete'){
+    deletedata()
+  }
 
 

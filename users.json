@@ -1,1 +1,12 @@
-[{"id":1,"name":"Kunle","role":"admin"},{"id":2,"name":"James","role":"user"},{"id":3,"name":"David","role":"user"},{"id":4,"name":"Tolu","role":"user"},{"id":5,"name":"Denice","role":"user"},{"id":6,"name":"ife","role":"admin"},{"id":7,"name":"marho","role":"admin"}]
+
+
+[{"id":1,"name":"Kunle","role":"admin", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":2,"name":"James","role":"user", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":3,"name":"David","role":"user", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":4,"name":"Tolu","role":"user", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":5,"name":"Denice","role":"user", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":6,"name":"ife","role":"admin", "email":"kunki@kunki.net" , "passkey":"1234" },
+{"id":7,"name":"marho","role":"admin", "email":"kunki@kunki.net" , "passkey":"1234" }]
+
+
+

@@ -9,6 +9,6 @@ route.get('/users/:id', usercontroller.getUser)
 route.post('/users/adduser', usercontroller.createUser)
 route.patch('/users/updateuser/:id', usercontroller.updateUser)
 route.delete('/users/deleteuser/:id', usercontroller.deleteUser)
-
+route.post('/users/login', usercontroller.login)
 
 module.exports = route
