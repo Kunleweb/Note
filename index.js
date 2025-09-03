@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
-const userroute = require('./routes/userroutes')
+const uniroute = require('./routes/route')
 
 
 
 
 app.use(express.json())
 
-app.use('/api', userroute)
+app.use('/api', uniroute)
 
 
 app.listen(3000, ()=>{
