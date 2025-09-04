@@ -10,6 +10,6 @@ route.get('/notes/:id', notescontroller.getnote)
 route.post('/notes/addnote', notescontroller.createNote)
 route.patch('/notes/updatenote/:id', notescontroller.updateNote)
 route.delete('/notes/deletenote/:id', notescontroller.deleteNote)
-route.post('/users/login', usercontroller.login)
-
+// route.post('/users/login', usercontroller.login)
+// route.get('/users/loginpage', usercontroller.loginpage)
 module.exports = route

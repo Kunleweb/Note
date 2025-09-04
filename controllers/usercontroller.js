@@ -23,3 +23,10 @@ exports.login = (req, res, next) =>{
         res.status(200).json({status:'login successful', data: result})
     })
 }
+
+
+
+
+exports.loginpage = (req,res)=>{
+    res.status(200).render('login.ejs')
+}
