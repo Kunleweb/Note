@@ -15,3 +15,9 @@ Thats all for now!!
 
 
 4) Four our db: we will use a json file for now.
+
+
+
+
+<!-- ACTIONS POINTS -->
+- Build the front end using html, css, js

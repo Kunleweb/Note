@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      background-color: #0984e3;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar button {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #74b9ff;
+      transition: background 0.2s;
+    }
+
+    .sidebar button:hover {
+      background-color: #55a8e0;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      background-color: #f5f6fa;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <button id="addNote">Add Note</button>
+    <button id="createNote">Create Note</button>
+    <button id="allNotes">All Notes</button>
+  </div>
+
+  <div class="main">
+    <h1>Welcome to your Notes Dashboard</h1>
+    <p>This area is currently blank. Your notes or forms will appear here.</p>
+  </div>
+</body>
+</html>
+

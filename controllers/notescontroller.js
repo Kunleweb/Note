@@ -5,12 +5,21 @@ const connection = require('../db')
 
 
 
+exports.overviewNotes = (req,res) =>{
+    res.status(200).render('overview.ejs')
+}
+
+
+
 exports.getAllnotes =  (req, res) => {
     connection.query('Select * FROM notes', (err, result)=>{
          res.status(200).json({status:'success', data: result})
-
     })    
 }
+
+
+
+
 
 
 
@@ -59,14 +68,5 @@ exports.deleteNote = (req, res)=>{
 }
 
 
-exports.login = (req, res) =>{
-    const {email, passkey } = req.body;
-    if(!email || !passkey){
-        res.status(400).json({status:'input email and passkey'})
-    }
-    connection.query('Select *  from users where email = ?, passkey = ?',
-         [email, passkey], (err, result)=>{
-        res.status(200).json({status:'login successful', data: result})
-    })
-}
+
 

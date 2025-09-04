@@ -10,7 +10,7 @@ connection.connect()
 
 
 const schema =  (req,res)=>{
-    connection.query('CREATE TABLE users(id INT PRIMARY KEY AUTO_INCREMENT,email VARCHAR(100),passkey VARCHAR(12));', 
+    connection.query('CREATE TABLE users(id INT PRIMARY KEY AUTO_INCREMENT,email VARCHAR(100),password VARCHAR(12));', 
         (err, result)=>{
             console.log(err)
         }

@@ -16,8 +16,8 @@ connection.connect()
 
 
 const importdata = (req, res) =>{
-  user.forEach(element=>{connection.query('INSERT INTO users (id, email, passkey) VALUES (?,?,?)',
-    [element.id, element.email, element.passkey],(err, result)=>{
+  user.forEach(element=>{connection.query('INSERT INTO users (id, email, password) VALUES (?,?,?)',
+    [element.id, element.email, element.password],(err, result)=>{
         console.log(err)
       
     } )})
