@@ -1,5 +1,3 @@
-
-
 const login = async (email, password) => {
   try {
     const res = await axios({

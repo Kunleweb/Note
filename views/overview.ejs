@@ -57,6 +57,49 @@
     <h1>Welcome to your Notes Dashboard</h1>
     <p>This area is currently blank. Your notes or forms will appear here.</p>
   </div>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  <style>
+    #dialog textarea {
+      width: 100%;
+      height: 250px;
+      box-sizing: border-box;
+    }
+  </style>
+  <div id="dialog" title="Add New Note">
+  <textarea placeholder="Write your note here..."></textarea>
+  <div style="margin-top:10px; text-align:right;">
+    <button id="saveNote">Save</button>
+  </div>
+</div>
+<script>
+$(function() {
+  // Initialize the dialog once
+  $("#dialog").dialog({
+    autoOpen: false,
+    modal: true,
+    show: "blind",
+    hide: "blind",
+    height: 800,
+    width: 650,
+    resizable: false,
+    draggable: true
+  });
+
+  // Open the dialog when "Add Note" button is clicked
+  $("#addNote").click(function() {
+    $("#dialog").dialog("open");
+  });
+});
+</script>
+
+
+    
+
+
+
+  </script>
 </body>
 </html>
 

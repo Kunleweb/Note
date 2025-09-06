@@ -5,8 +5,6 @@ const connection = require('../db')
 
 
 
-
-
 exports.login = (req, res, next) =>{
     // Check if user input password or email
     const {email, password } = req.body;
@@ -16,7 +14,7 @@ exports.login = (req, res, next) =>{
     // Check if email matches db 
     connection.query('Select * from users where email = ? AND password = ?',
          [email, password], (err, result)=>{
-        if(err){ return res.status(500).json({status:'error', message: message.err})};
+        if(err){ return res.status(500).json({status:'error', message: err.message})};
         if(result.length == 0){
             return res.status(401).json({status: 'Invalid credentials'})
         }
