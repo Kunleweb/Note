@@ -4,7 +4,6 @@ const notescontroller = require('../controllers/notescontroller')
 const route = express.Router()
 
 // Get all users
-route.get('/notes/overview', notescontroller.overviewNotes)
 route.get('/notes', notescontroller.getAllnotes)
 route.get('/notes/:id', notescontroller.getnote)
 route.post('/notes/addnote', notescontroller.createNote)

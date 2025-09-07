@@ -5,18 +5,27 @@ const connection = require('../db')
 
 
 
-exports.overviewNotes = (req,res) =>{
-    res.status(200).render('overview.ejs')
-}
 
 
 
 exports.getAllnotes =  (req, res) => {
-    connection.query('Select note FROM notes', (err, result)=>{
-         res.status(200).json({status:'success', data: result})
+    const allnotes = connection.query('Select note FROM notes', (err, result)=>{
+         res.status(200).render('overview.ejs')
     })    
 }
 
+
+// exports.getAllnotes = (req, res) => {
+//     connection.query('SELECT id, title, content FROM notes', (err, results) => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).send('Database error');
+//         }
+
+//         // Pass the results to the EJS template
+//         res.status(200).render('overview.ejs', { allnotes: results });
+//     });
+// };
 
 
 
