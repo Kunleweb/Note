@@ -48,9 +48,8 @@
 </head>
 <body>
   <div class="sidebar">
+     <button id="allNotes">All Notes</button>
     <button id="addNote">Add Note</button>
-    <button id="createNote">Create Note</button>
-    <button id="allNotes">All Notes</button>
   </div>
 
   <div class="main">
@@ -60,6 +59,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
   <style>
     #dialog textarea {
       width: 100%;
@@ -68,7 +68,7 @@
     }
   </style>
   <div id="dialog" title="Add New Note">
-  <textarea placeholder="Write your note here..."></textarea>
+  <textarea id="place" placeholder="Write your note here..."></textarea>
   <div style="margin-top:10px; text-align:right;">
     <button id="saveNote">Save</button>
   </div>
@@ -93,13 +93,8 @@ $(function() {
   });
 });
 </script>
-
-
-    
-
-
-
-  </script>
+</script>
+  <scipt src="/js/script/save.js"></scipt>
 </body>
 </html>
 
