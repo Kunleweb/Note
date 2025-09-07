@@ -54,7 +54,26 @@
 
   <div class="main">
     <h1>Welcome to your Notes Dashboard</h1>
-    <p>This area is currently blank. Your notes or forms will appear here.</p>
+    <p>TMy Notes</p>
+    <div id="notesTableContainer" style="margin-top:20px;">
+    <table id="notesTable" style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #333; padding:8px;">ID</th>
+          <th style="border:1px solid #333; padding:8px;">TITLE</th>
+          <th style="border:1px solid #333; padding:8px;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border:1px solid #333; padding:8px;">Sample 1</td>
+          <td style="border:1px solid #333; padding:8px;">Sample 2</td>
+          <td style="border:1px solid #333; padding:8px;">Sample 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   </div>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -96,6 +115,7 @@ $(function() {
   });
 });
 </script>
+ <script src = "/js/script/overview.js"></script>
 </body>
 </html>
 

@@ -12,7 +12,7 @@ exports.overviewNotes = (req,res) =>{
 
 
 exports.getAllnotes =  (req, res) => {
-    connection.query('Select * FROM notes', (err, result)=>{
+    connection.query('Select note FROM notes', (err, result)=>{
          res.status(200).json({status:'success', data: result})
     })    
 }

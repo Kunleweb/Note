@@ -20,6 +20,4 @@ Thats all for now!!
 
 
 <!-- ACTIONS POINTS -->
-- I want to create a pop up script when the add note is clicked such that it brings up a pop up script and user can input text. 
-
-- Now I want the save to save to db and show a an alert script that says saved and hen is display in all notes 
+- Now we need to show the notes that has been stored in db and list it in all notes 
