@@ -27,3 +27,5 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
   const password = e.target.password.value;
   login(email, password);
 });
+
+

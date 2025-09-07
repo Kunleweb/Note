@@ -11,7 +11,7 @@ const showAlert = (type, message)=>{
 
 
 const save = async(title, note)=>{
-    try{
+    
         const res = await axios({
             method: 'POST',
             url: '/api/notes/addnote',
@@ -20,13 +20,12 @@ const save = async(title, note)=>{
             }})
     if(res.data.status === 'success'){
         showAlert('New Note Saved')
-    } 
-    }catch(err){showAlert('Error Saving to Database')}
-}
+    }}
 
 
 document.getElementById('saveNote').addEventListener('click', (e)=>{
     e.preventDefault();
+    console.log('pinged!')
     const title = document.getElementById('place').value
     const note = document.getElementById('place').value
     save(title, note)
