@@ -3,13 +3,14 @@ const login = async (email, password) => {
     const res = await axios({
       method: 'POST',
       url: '/users/login',
-      data: { email, password }
+      data: { email, password },
+      withCredentials: true 
     });
     console.log('Response from server:', res.data);
 
-    if (res.data.status === 'login successful') {
+    if (res.data.status === 'success') {
       // redirect after successful login
-      window.location.href = 'http://127.0.0.1:3000/api/notes/overview'; // change to your page
+      window.location.href = 'http://127.0.0.1:3000/api/notes/'; // change to your page
     } else {
       document.getElementById('message').textContent = res.data.status;
     }
