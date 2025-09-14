@@ -2,9 +2,7 @@ const fs = require('fs')
 const Notes= fs.readFileSync('./notes.json', 'utf-8')
 const note = JSON.parse(Notes)
 const connection = require('../db')
-const cookieParser = require('cookie-parser')
 const express = require('express')
-const app = express()
 const jwt = require('jsonwebtoken')
 const { sign } = require('crypto')
 // exports.getAllnotes =  (req, res) => {
@@ -13,27 +11,34 @@ const { sign } = require('crypto')
 //     })    
 // }
 
-app.use(cookieParser(), function(req, res, next) {
-    let token = req.cookies.jwt;
-    if (token && verify(token)) {
-        next();
-    } else {
-        res.redirect('/users/login');
-    }
-});
+// app.use(cookieParser(), function(req, res, next) {
+//     let token = req.cookies.jwt;
+//     if (token && verify(token)) {
+//         next();
+//     } else {
+//         res.redirect('/users/login');
+//     }
+// });
+
+
+
+// exports.getAllnotes = (req, res) => { 
+//     connection.query('SELECT * FROM notes', (err, results) => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).send('Database error');
+//         }
+
+//         // Pass the results to the EJS template
+//         res.status(200).render('overview.ejs', { allnotes: results });
+//     });
+// };
+
 
 exports.getAllnotes = (req, res) => { 
-    connection.query('SELECT * FROM notes', (err, results) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).send('Database error');
-        }
-
         // Pass the results to the EJS template
-        res.status(200).render('overview.ejs', { allnotes: results });
-    });
-};
-
+        res.status(200).render('overview.ejs');
+    }
 
 
 

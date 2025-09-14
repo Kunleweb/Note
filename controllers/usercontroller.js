@@ -6,8 +6,7 @@ const note = JSON.parse(Notes)
 const connection = require('../db')
 const jwt = require('jsonwebtoken')
 const { sign } = require('crypto')
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
+const { promisify } = require('util')
 
 
 const signtoken = id =>{
@@ -46,7 +45,7 @@ secure: false
 
 
 exports.protect = (req, res)=>{
-    let token = req.cookies ? req.cookies.jwt: null
+    let token = req.cookies.jwt
     if(token){res.redirect('/api/notes/')}
     else{
       res.redirect('/users/login')
@@ -55,9 +54,11 @@ exports.protect = (req, res)=>{
 
 
 
+
+
+
 exports.login = (req, res, next) => {
     const { email, password } = req.body;
-
     if (!email || !password) {
         return res.status(400).json({ status: 'input email and password' });
     }
