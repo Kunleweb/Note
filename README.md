@@ -1,5 +1,4 @@
-Note-Taking RESTful API
-
+Note-Taking Express App
 A simple API for a note-taking app using MySQL.
 
 Endpoints
